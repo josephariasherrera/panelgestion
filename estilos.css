@@ -1,0 +1,240 @@
+
+/* Configuración general de la página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Encabezado principal */
+.encabezado {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.encabezado h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    color: #dbeafe;
+}
+
+/* Contenedor del contenido */
+.contenedor {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    gap: 24px;
+}
+
+/* Tarjetas blancas */
+.tarjeta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.07);
+}
+
+.tarjeta h2 {
+    font-size: 21px;
+    margin-bottom: 18px;
+    color: #0f172a;
+}
+
+/* Campos del formulario */
+.grupo-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    background-color: white;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Botones del formulario */
+.acciones-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+#btn-cancelar {
+    background-color: #64748b;
+}
+
+#btn-cancelar:hover {
+    background-color: #475569;
+}
+
+/* Mensajes de estado */
+#mensaje {
+    margin-bottom: 15px;
+    padding: 10px 12px;
+    border-radius: 7px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    overflow-wrap: anywhere;
+}
+
+/* Tabla de usuarios */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: #0f172a;
+    color: white;
+}
+
+th,
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+td {
+    overflow-wrap: anywhere;
+}
+
+td button {
+    margin: 3px;
+    white-space: nowrap;
+}
+
+.btn-editar {
+    background-color: #0f766e;
+}
+
+.btn-editar:hover {
+    background-color: #115e59;
+}
+
+.btn-eliminar {
+    background-color: #dc2626;
+}
+
+.btn-eliminar:hover {
+    background-color: #b91c1c;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Adaptación para tabletas */
+@media (max-width: 768px) {
+    .encabezado {
+        padding: 28px 16px;
+    }
+
+    .encabezado h1 {
+        font-size: 25px;
+    }
+
+    .contenedor {
+        width: 94%;
+        margin: 20px auto;
+        gap: 18px;
+    }
+
+    .tarjeta {
+        padding: 18px;
+    }
+
+    .grupo-campos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 480px) {
+    .encabezado h1 {
+        font-size: 22px;
+    }
+
+    .tarjeta {
+        padding: 14px;
+    }
+
+    .acciones-formulario button {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+}
